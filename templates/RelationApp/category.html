@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block title %}
+<title>Category</title>
+{% endblock title %}
+
+{% block content %}
+<h2>Hello, This is Category Page</h2>
+<div>
+    <b>Category:{{categories}}</b>
+
+</div>
+
+<div>
+    {% for product in products %}
+     <br/><br/><br/><br/>
+        <b>Category:</b><p>{{product.category}}</p>
+        <b>product Name:</b><p>{{product.product_name}}</p>
+        <b>Discription:</b><p>{{product.desc}}</p>
+        <b>Created Date:</b><p>{{product.created_date}}</p>
+    {% endfor %}
+
+
+</div>
+
+
+{% endblock content %}
